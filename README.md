@@ -8,11 +8,11 @@ Create an object
 
 Printout encrypted string
 
-    System.out.println(">" + test.encrypt("Test", "Test1234Test1234") + "<");
+    System.out.println(">" + cipher.encrypt("Test", "Test1234Test1234") + "<");
     
 Printout decrypted string
 
-    System.out.println(">" + test.decrypt("5c61eZ2k+CbeDThLD2bP/w==", "Test1234Test1234") + "<");
+    System.out.println(">" + cipher.decrypt("5c61eZ2k+CbeDThLD2bP/w==", "Test1234Test1234") + "<");
     
 # License
 ![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)
