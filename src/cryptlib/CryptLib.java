@@ -26,6 +26,13 @@ import sun.misc.BASE64Encoder;
  * @author dmusiolik
  */
 public class CryptLib {
+ private String permPW;
+    
+    public CryptLib() {}
+    
+    public CryptLib(String permPW) {
+        this.permPW = permPW;
+    }
     
     public SecretKeySpec genKey(String schluessel) {
         SecretKeySpec returnable = null;
@@ -47,6 +54,14 @@ public class CryptLib {
     }
     
     public String encrypt(String text, String schluessel) {
+        return encrypt_intern(text, schluessel);
+    }
+    
+    public String encrypt(String text) {
+        return encrypt_intern(text, permPW);
+    }
+    
+    private String encrypt_intern(String text, String schluessel) {
         String returnable = null;
         try {
             // Verschluesseln
@@ -57,11 +72,21 @@ public class CryptLib {
             BASE64Encoder myEncoder = new BASE64Encoder();
             returnable = myEncoder.encode(encrypted);
         } catch (Exception e) {
+            e.printStackTrace();
+            returnable = "CRYPTOGRAPHIC ERROR! THIS IS NOT WHAT YOU WANT TO SEE!";
         }
         return returnable;
     }
     
     public String decrypt(String verschluesselter_text, String passwort) {
+        return decrypt_intern(verschluesselter_text, passwort);
+    }
+    
+    public String decrypt(String verschluesselter_text) {
+        return decrypt_intern(verschluesselter_text, permPW);
+    }
+    
+    private String decrypt_intern(String verschluesselter_text, String passwort) {
         String returnable = null;
         try {
             // BASE64 String zu Byte-Array konvertieren
@@ -74,6 +99,7 @@ public class CryptLib {
             returnable = new String(cipherData2);
         } catch (Exception e) {
             e.printStackTrace();
+            returnable = "CRYPTOGRAPHIC ERROR! THIS IS NOT WHAT YOU WANT TO SEE!";
         }
         return returnable;
     }

@@ -24,6 +24,26 @@ Output:
 
 >\>Test<
 
+Or try out the PermKey function:
+
+Create an object
+
+    CryptLib cipher = new CryptLib("Test1234Test1234");
+
+Printout encrypted string
+
+    System.out.println(">" + cipher.encrypt("Test") + "<");
+    
+Printout decrypted string
+
+    System.out.println(">" + cipher.decrypt("5c61eZ2k+CbeDThLD2bP/w==") + "<");
+    
+Output:
+>\>5c61eZ2k+CbeDThLD2bP/w==<
+
+>\>Test<
+
+
     
 # License
 ![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)
