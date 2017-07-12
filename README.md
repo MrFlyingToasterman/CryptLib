@@ -1,5 +1,10 @@
 # CryptLib
 A Java library for encrypting and decrypting text with AES
+# WARNING!
+Please be sure you know what you are doing!
+This is a 128 bit AES/ECB cipher! Not military encryption!
+You should only encrypt text!
+Read more about ECB: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
 # Usage
 
 Create an object

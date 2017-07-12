@@ -41,6 +41,7 @@ public class CryptLib {
             SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
             returnable = secretKeySpec;
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return returnable;
     }
@@ -72,6 +73,7 @@ public class CryptLib {
             byte[] cipherData2 = cipher2.doFinal(crypted2);
             returnable = new String(cipherData2);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return returnable;
     }
