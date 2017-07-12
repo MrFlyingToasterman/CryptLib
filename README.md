@@ -2,7 +2,7 @@
 A Java library for encrypting and decrypting text with AES
 # WARNING!
 Please be sure you know what you are doing! <br>
-This is a 128 bit AES/ECB cipher! Not military encryption! <br>
+This is a 128 bit AES/ECB cipher! Not a military encryption! <br>
 You should only encrypt text! <br>
 Read more about ECB: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation <br>
 # Usage
@@ -47,7 +47,7 @@ Output:
 
 >\>Test<
 
-
+<br>
     
 # License
 ![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)
